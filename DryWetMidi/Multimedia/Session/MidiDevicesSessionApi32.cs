@@ -16,7 +16,7 @@ namespace Melanchall.DryWetMidi.Multimedia
         [DllImport(LibraryName, ExactSpelling = true)]
         private static extern SESSION_OPENRESULT OpenSession_Mac(IntPtr name, InputDeviceCallback inputDeviceCallback, OutputDeviceCallback outputDeviceCallback, out IntPtr handle);
 
-        [DllImport(LibraryName, ExactSpelling = true)]
+        [DllImport(LibraryName, ExactSpelling = true, CallingConvention = CallingConvention.Cdecl)]
         private static extern SESSION_OPENRESULT OpenSession_Win(IntPtr name, out IntPtr handle);
 
         [DllImport(LibraryName, ExactSpelling = true)]
